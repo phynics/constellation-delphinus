@@ -1,0 +1,36 @@
+{
+    "name": "constellation-delphinus",
+    "version": "1.0.0",
+    "description": "A bridge between OBS WebSocket API and coaty framework.",
+    "scripts": {
+        "build": "NODE_OPTIONS='--no-experimental-fetch' gulp build",
+        "lint": "gulp lint",
+        "lint:fix": "gulp lint:fix",
+        "broker": "coaty-scripts broker --nobonjour",
+        "broker:verbose": "coaty-scripts broker --verbose --nobonjour",
+        "start": "node -r dotenv/config dist/agent.js",
+        "docker:build": "docker-compose build",
+        "docker:up": "docker-compose up",
+        "docker:down": "docker-compose down"
+    },
+    "readme": "README.md",
+    "author": "phynics",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "@coaty/binding.mqtt": "^2.0.5",
+        "@coaty/core": "^2.4.0",
+        "dotenv": "^10.0.0",
+        "rxjs": "^6.6.7"
+    },
+    "devDependencies": {
+        "@types/node": "^16.9.6",
+        "fs-extra": "^10.0.0",
+        "gulp": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-tslint": "^8.1.4",
+        "gulp-typescript": "^5.0.1",
+        "tslint": "^5.20.1",
+        "typescript": "^4.4.3"
+    }
+}
